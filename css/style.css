@@ -2109,13 +2109,13 @@ ol {
   .slicknav_nav .slicknav_row:hover {
     border-radius: 0;
     background: transparent;
-    color: magenta;
+    color: #ffffff;
   }
 
   .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: magenta;
+    color: #ffffff;
   }
 
   .slicknav_nav {
@@ -2281,7 +2281,7 @@ ol {
   .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: #111111;
+    color: magenta;
   }
 
   .slicknav_nav {
@@ -2473,7 +2473,6 @@ ol {
   font-family: "upheavt", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
   display: block;
   line-height: 1.2;
 }
@@ -2713,6 +2712,13 @@ ol {
     transform: scale(1.2);
 }
 
+/* Ajuste de zoom para la imagen de fondo de Limina Studio */
+.work__item[data-setbg*="logo_limina.png"] {
+    background-size: 105%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 /* Estilos personalizados para iconos sociales */
 .social-icon {
     width: 20px;
@@ -2749,15 +2755,17 @@ ol {
     filter: brightness(0) invert(1) opacity(0.7);
 }
 
-/* Tamaños específicos para Facebook e Instagram (más grandes) */
+/* Tamaños específicos para Facebook, Instagram y LinkedIn (más grandes) */
 .social-icon[alt="Facebook"],
-.social-icon[alt="Instagram"] {
+.social-icon[alt="Instagram"],
+.social-icon[alt="Linkedin"] {
     width: 24px;
     height: 24px;
 }
 
 .social-icon-footer[alt="Facebook"],
-.social-icon-footer[alt="Instagram"] {
+.social-icon-footer[alt="Instagram"],
+.social-icon-footer[alt="Linkedin"] {
     width: 22px;
     height: 22px;
 }
@@ -2821,7 +2829,7 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 4px;
 }
 
 .mobile-social-link {
@@ -2842,8 +2850,8 @@ ol {
 }
 
 .mobile-social-icon {
-    width: 22px;
-    height: 22px;
+    width: 27px;
+    height: 31px;
     object-fit: contain;
     transition: all 0.3s ease;
 }
@@ -2871,4 +2879,59 @@ ol {
 
 .slicknav_brand {
     display: none !important;
+}
+
+/* Estado activo para menú móvil - Navegación dinámica */
+.slicknav_nav a.active,
+.slicknav_nav li.active > a {
+    color: #00bfe7 !important;
+    background: rgba(0, 191, 231, 0.1) !important;
+    font-weight: bold !important;
+    border-left: 3px solid #00bfe7 !important;
+}
+
+/* Botón Scroll to Top */
+.scroll-to-top-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #00bfe7, #0099c7);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 191, 231, 0.3);
+}
+
+.scroll-to-top-btn:hover {
+    background: linear-gradient(135deg, #0099c7, #007ba7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 191, 231, 0.4);
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top-btn:active {
+    transform: translateY(0px);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        right: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
 }

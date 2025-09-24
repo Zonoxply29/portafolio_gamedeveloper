@@ -42,7 +42,8 @@
 	--------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
-        allowParentLinks: true
+        allowParentLinks: true,
+        closeOnClick: true
     });
 
     /*------------------
@@ -182,6 +183,58 @@
     });
 
     /*------------------
+        Active Menu Item on Scroll
+    --------------------*/
+    $(window).scroll(function() {
+        var scrollPos = $(document).scrollTop() + 100; // 100px offset para compensar header
+        
+        // Definir las secciones y sus enlaces correspondientes
+        var sections = [
+            { id: '#home', link: 'a[href="#home"]' },
+            { id: '#about', link: 'a[href="#about"]' },
+            { id: '#portfolio', link: 'a[href="#portfolio"]' },
+            { id: '#modelos', link: 'a[href="#modelos"]' },
+            { id: '#contact', link: 'a[href="#contact"]' }
+        ];
+        
+        // Remover clases activas de todos los enlaces
+        $('nav a, .slicknav_nav a').removeClass('active');
+        $('nav li, .slicknav_nav li').removeClass('active');
+        
+        // Encontrar la sección actual
+        var currentSection = null;
+        
+        for (var i = 0; i < sections.length; i++) {
+            var section = $(sections[i].id);
+            if (section.length) {
+                var sectionTop = section.offset().top;
+                var sectionBottom = sectionTop + section.outerHeight();
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    currentSection = sections[i];
+                    break;
+                }
+            }
+        }
+        
+        // Si no hay sección específica, usar la primera por defecto
+        if (!currentSection && scrollPos < 200) {
+            currentSection = sections[0]; // home
+        }
+        
+        // Aplicar clase activa a la sección actual
+        if (currentSection) {
+            // Para menú desktop
+            $('nav ' + currentSection.link).addClass('active');
+            $('nav ' + currentSection.link).parent('li').addClass('active');
+            
+            // Para menú móvil (SlickNav)
+            $('.slicknav_nav ' + currentSection.link).addClass('active');
+            $('.slicknav_nav ' + currentSection.link).parent('li').addClass('active');
+        }
+    });
+
+    /*------------------
         Hero Video Simple Control
     --------------------*/
     setTimeout(function() {
@@ -213,5 +266,60 @@
             }
         }
     }, 1000);
+
+    /*------------------
+        Smooth Scroll Navigation
+    --------------------*/
+    // Smooth scroll para enlaces de navegación (desktop y móvil)
+    $('a[href*="#"]:not([href="#"])').click(function(e) {
+        // Verificar si el enlace apunta a una sección en la misma página
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            
+            if (target.length) {
+                // Prevenir comportamiento por defecto
+                e.preventDefault();
+                
+                // Cerrar menú móvil si está abierto
+                if ($('.slicknav_menu').hasClass('slicknav_open')) {
+                    $('.slicknav_btn').click();
+                }
+                
+                // Animación de scroll suave (1 segundo = 1000ms)
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 80 // 80px offset para el header fijo
+                }, 1000, 'easeInOutCubic');
+                
+                return false;
+            }
+        }
+    });
+
+    // Función de easing personalizada para scroll más suave
+    $.easing.easeInOutCubic = function (x, t, b, c, d) {
+        if ((t/=d/2) < 1) return c/2*t*t*t + b;
+        return c/2*((t-=2)*t*t + 2) + b;
+    };
+
+    /*------------------
+        Scroll to Top Button
+    --------------------*/
+    // Mostrar/ocultar botón según scroll position
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.scroll-to-top-btn').addClass('show');
+        } else {
+            $('.scroll-to-top-btn').removeClass('show');
+        }
+    });
+
+    // Funcionalidad del botón scroll to top
+    $('.scroll-to-top-btn').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800, 'easeInOutCubic');
+        return false;
+    });
 
 })(jQuery);
