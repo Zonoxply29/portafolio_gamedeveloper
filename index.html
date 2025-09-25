@@ -63,6 +63,29 @@
                                 <li><a href="#modelos">3D Models</a></li>
                                 <li><a href="#contact">Contact</a></li>
                                 <li class="mobile-social-icons">
+                                    <!-- Language Selector for Mobile -->
+                                    <div class="language-selector">
+                                        <button class="language-toggle" id="languageToggleMobile">
+                                            <img class="flag-icon" id="currentFlagMobile" src="img/banderas/spain.svg" alt="ES" />
+                                            <span class="lang-text" id="currentLangMobile">ES</span>
+                                            <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                        <div class="language-dropdown" id="languageDropdownMobile">
+                                            <a href="#" class="language-option" data-lang="es">
+                                                <img class="flag-icon" src="img/banderas/spain.svg" alt="ES" />
+                                                <span>Español</span>
+                                            </a>
+                                            <a href="#" class="language-option" data-lang="en">
+                                                <img class="flag-icon" src="img/banderas/usa.svg" alt="EN" />
+                                                <span>English</span>
+                                            </a>
+                                            <a href="#" class="language-option" data-lang="ja">
+                                                <img class="flag-icon" src="img/banderas/japan.svg" alt="JA" />
+                                                <span>日本語</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="mobile-social-container">
                                         <span class="mobile-social-title">Sígueme:</span>
                                         <div class="mobile-social-links">
@@ -92,6 +115,30 @@
                             </ul>
                         </nav>
                         <div class="header__nav__social">
+                            <!-- Language Toggle -->
+                            <div class="language-selector">
+                                <button class="language-toggle" id="languageToggle">
+                                    <img class="flag-icon" id="currentFlag" src="img/banderas/spain.svg" alt="ES" />
+                                    <span class="lang-text" id="currentLang">ES</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <div class="language-dropdown" id="languageDropdown">
+                                    <a href="#" class="language-option" data-lang="es">
+                                        <img class="flag-icon" src="img/banderas/spain.svg" alt="ES" />
+                                        <span>Español</span>
+                                    </a>
+                                    <a href="#" class="language-option" data-lang="en">
+                                        <img class="flag-icon" src="img/banderas/usa.svg" alt="EN" />
+                                        <span>English</span>
+                                    </a>
+                                    <a href="#" class="language-option" data-lang="ja">
+                                        <img class="flag-icon" src="img/banderas/japan.svg" alt="JA" />
+                                        <span>日本語</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Icons -->
                             <a href="https://dreamrider712.artstation.com/" target="_blank"><img
                                     src="img/icons/artstation_logo.svg" alt="ArtStation" class="social-icon"></a>
                             <a href="https://liminastudio.itch.io/" target="_blank"><img src="img/icons/itch_icon.png"
@@ -673,9 +720,7 @@
                     <div class="col-lg-12 text-center">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         <p class="footer__copyright__text">Gabriel Loaeza &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
+                            <span id="currentYear">2025</span>
                             All rights reserved
                         </p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

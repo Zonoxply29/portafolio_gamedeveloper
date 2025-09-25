@@ -4,9 +4,9 @@
         defaults = {
             label: 'MENU',
             duplicate: true,
-            duration: 200,
-            easingOpen: 'swing',
-            easingClose: 'swing',
+            duration: 400,
+            easingOpen: 'easeOutCubic',
+            easingClose: 'easeInCubic',
             closedSymbol: '&#9658;',
             openedSymbol: '&#9660;',
             prependTo: 'body',
@@ -437,8 +437,30 @@
                 settings.beforeOpen(trigger);
             }
             if (settings.animations === 'jquery') {
-                el.stop(true,true).slideDown(duration, settings.easingOpen, function(){
-                    afterOpen(trigger, parent);
+                // Animación personalizada más fluida para apertura
+                el.css({
+                    'height': '0px',
+                    'opacity': '0',
+                    'display': 'block',
+                    'overflow': 'hidden',
+                    'transform': 'translateY(-10px)'
+                });
+                
+                el.animate({
+                    'height': el.get(0).scrollHeight + 'px',
+                    'opacity': '1',
+                    'transform': 'translateY(0px)'
+                }, {
+                    duration: duration,
+                    easing: settings.easingOpen,
+                    complete: function() {
+                        el.css({
+                            'height': 'auto',
+                            'transform': '',
+                            'overflow': ''
+                        });
+                        afterOpen(trigger, parent);
+                    }
                 });
             } else if(settings.animations === 'velocity') {
                 el.velocity("finish").velocity("slideDown", {
@@ -461,8 +483,29 @@
             }
 
             if (settings.animations === 'jquery') {
-                el.stop(true,true).slideUp(duration, this.settings.easingClose, function() {
-                    afterClose(trigger, parent)
+                // Animación personalizada más fluida para cierre
+                var currentHeight = el.height();
+                el.css({
+                    'height': currentHeight + 'px',
+                    'overflow': 'hidden'
+                });
+                
+                el.animate({
+                    'height': '0px',
+                    'opacity': '0',
+                    'transform': 'translateY(-10px)'
+                }, {
+                    duration: duration * 0.8, // Cierre ligeramente más rápido
+                    easing: settings.easingClose,
+                    complete: function() {
+                        el.css({
+                            'height': '',
+                            'opacity': '',
+                            'transform': '',
+                            'overflow': ''
+                        });
+                        afterClose(trigger, parent);
+                    }
                 });
             } else if (settings.animations === 'velocity') {
                 

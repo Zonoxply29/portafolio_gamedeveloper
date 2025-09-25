@@ -446,7 +446,113 @@ ol {
   margin-right: 18px;
 }
 .header__nav__social a:last-child {
-  margin-right: 0;
+  margin-right: 19px;
+}
+
+/* Language Selector Styles */
+.language-selector {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+.language-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  font-family: "Play", sans-serif;
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.language-toggle .flag-icon {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.language-toggle .lang-text {
+  font-weight: 600;
+  margin: 0 2px;
+}
+
+.language-toggle .fa-chevron-down {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.language-toggle.active .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.language-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Play", sans-serif;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.language-option .flag-icon {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.language-option.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #00d4ff;
 }
 
 .slicknav_menu {
@@ -2281,7 +2387,7 @@ ol {
   .slicknav_nav a:hover {
     border-radius: 0;
     background: transparent;
-    color: magenta;
+    color: #ffffff;
   }
 
   .slicknav_nav {
@@ -2571,6 +2677,21 @@ ol {
     padding-left: 20px;
   }
   
+  /* Language Selector Responsive */
+  .language-selector {
+    margin-right: 15px;
+  }
+  
+  .language-toggle {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .language-dropdown {
+    min-width: 120px;
+    right: -10px;
+  }
+  
   /* Hero section adjustments */
   .hero__text h2 {
     font-size: 48px;
@@ -2849,6 +2970,119 @@ ol {
     transform: translateY(-3px);
 }
 
+/* Language selector in mobile menu */
+.slicknav_nav .language-selector {
+    margin: 15px auto;          /* Cambiado: auto para centrar horizontalmente */
+    text-align: center;
+    position: relative;         /* Agregado: Para que el dropdown se posicione relativo a este contenedor */
+    max-width: 200px;          /* Agregado: Ancho máximo para mejor centrado */
+    width: calc(100% - 40px);  /* Agregado: Ancho responsivo con márgenes */
+    display: flex;              /* Agregado: Flexbox para centrado perfecto */
+    flex-direction: column;     /* Agregado: Dirección vertical */
+    align-items: center;        /* Agregado: Centrado horizontal */
+}
+
+.slicknav_nav .language-toggle {
+    width: 100%;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 6px;         /* Agregado: Esquinas redondeadas */
+    transition: all 0.3s ease; /* Agregado: Transición suave para hover */
+    display: flex;              /* Agregado: Flexbox para mejor centrado */
+    align-items: center;        /* Agregado: Centrado vertical */
+    margin: 0 auto;             /* Agregado: Centrado horizontal adicional */
+}
+
+.slicknav_nav .language-toggle:hover {
+    background: rgba(255, 255, 255, 0.15); /* Agregado: Efecto hover */
+}
+
+.slicknav_nav .language-dropdown {
+    position: static;            /* Vuelve a static para que empuje el contenido hacia abajo */
+    width: 100%;                /* Toma todo el ancho disponible */
+    margin-top: 10px;           /* Espacio desde el botón */
+    margin-bottom: 10px;        /* Espacio hacia los elementos siguientes */
+    opacity: 0;                 /* Oculto por defecto */
+    visibility: hidden;         /* No visible */
+    max-height: 0;              /* Altura 0 para animación fluida */
+    transform: translateY(-10px); /* Animación de entrada desde arriba */
+    background: #222222;        /* Cambiado: Mismo color que el fondo del menú hamburguesa */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    border-radius: 8px;         /* Esquinas redondeadas */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave con curva personalizada */
+    overflow: hidden;           /* Oculta contenido durante la animación */
+    padding: 0;                 /* Sin padding inicialmente */
+}
+
+.slicknav_nav .language-dropdown.show {
+    opacity: 1;                 /* Visible cuando se activa */
+    visibility: visible;        /* Visible */
+    max-height: 180px;          /* Altura máxima optimizada para 3 opciones */
+    transform: translateY(0);   /* Posición final */
+    padding: 8px 0;             /* Padding cuando está visible */
+}
+
+.slicknav_nav .language-option {
+    background: rgba(255, 255, 255, 0.08); /* Cambiado: Fondo más sutil para integrar con #222222 */
+    margin: 4px 8px;            /* Márgenes más pequeños */
+    border-radius: 6px;
+    justify-content: center;
+    padding: 10px 15px;         /* Padding más compacto */
+    transition: all 0.3s ease; /* Transición suave para hover */
+    display: flex;              /* Flex para alineación */
+    align-items: center;        /* Centrado vertical */
+    gap: 8px;                   /* Espacio entre ícono y texto */
+    color: #ffffff;             /* Agregado: Color de texto blanco */
+}
+
+.slicknav_nav .language-option:hover {
+    background: rgba(255, 255, 255, 0.15); /* Cambiado: Efecto hover más sutil */
+    transform: translateY(-1px); /* Pequeño efecto de elevación */
+    color: #ffffff;             /* Mantener color blanco en hover */
+}
+
+/* Animación personalizada para el dropdown móvil responsivo */
+@keyframes slideDownMobileResponsive {
+    0% {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    50% {
+        opacity: 0.5;
+        max-height: 100px;
+    }
+    100% {
+        opacity: 1;
+        max-height: 200px;
+        transform: translateY(0);
+    }
+}
+
+/* Permitir que el contenedor se expanda de forma fluida */
+.slicknav_nav li.mobile-social-icons {
+    transition: all 0.5s ease; /* Transición suave para el movimiento */
+    overflow: visible;          /* Permite que el contenido sea visible */
+}
+
+/* Transición suave para los iconos sociales cuando se desplazan */
+.slicknav_nav .mobile-social-container {
+    transition: transform 0.5s ease; /* Transición suave cuando se mueven hacia abajo */
+}
+
+/* Asegurar transición suave en el menú móvil */
+.slicknav_nav {
+    transition: height 0.5s ease; /* Transición suave de altura */
+}
+
+.slicknav_menu {
+    overflow: visible;          /* Permite expansión */
+}
+
 .mobile-social-icon {
     width: 27px;
     height: 31px;
@@ -2934,4 +3168,28 @@ ol {
         height: 45px;
         font-size: 16px;
     }
+}
+
+/* Mejoras de animación fluida para SlickNav */
+.slicknav_nav {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    will-change: transform, opacity !important;
+}
+
+.slicknav_nav .slicknav_row {
+    transition: all 0.2s ease !important;
+    will-change: transform !important;
+}
+
+.slicknav_btn {
+    transition: all 0.2s ease !important;
+    will-change: transform !important;
+}
+
+/* Optimización de rendimiento para animaciones */
+.slicknav_nav,
+.slicknav_btn,
+.slicknav_nav .slicknav_row {
+    backface-visibility: hidden !important;
+    perspective: 1000px !important;
 }
