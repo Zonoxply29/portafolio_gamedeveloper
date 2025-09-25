@@ -556,6 +556,19 @@
             tooltipTexturing: "Texturizado - Aplicación de materiales y texturas realistas",
             tooltipLevelDesign: "Level Design - Diseño de niveles y ambientes inmersivos",
             
+            // Tools Descriptions
+            toolBlender: "Modelado & Animación 3D",
+            toolZBrush: "Escultura Digital & Detallado",
+            toolMaya: "Animación & Rigging",
+            tool3DSMax: "Modelado Arquitectónico",
+            toolUnity: "Motor de Videojuegos",
+            toolUnreal: "Motor 3D Avanzado",
+            toolSubstance: "Texturizado PBR",
+            toolPhotoshop: "Edición de Imágenes",
+            toolClipStudio: "Ilustración Digital",
+            toolMarvelous: "Simulación de Ropa",
+            toolAseprite: "Pixel Art & Sprites",
+            
             // Counter Section
             counterGames: "Videojuegos Desarrollados",
             counter3D: "Modelos 3D Creados",
@@ -571,6 +584,22 @@
             modelsIntro: "Conoce mis Modelos!",
             modelsTitle: "Modelado 3d",
             viewPortfolio: "Ver Portafolio Completo",
+            
+            // Portfolio Section
+            portfolioUnrealTitle: "Unreal Engine Demo Reel",
+            portfolioChunLiTitle: "Chun Li",
+            portfolioChunLiDesc: "Fan art sculpt of Chun-Li, originally intended for 3D printing.",
+            portfolioLiminaTitle: "Conoce Limina Estudio",
+            
+            // 3D Models Team Section
+            modelsChunLiTitle: "Chun Li",
+            modelsChunLiDesc: "Fan art sculpt of Chun-Li, originally intended for 3D printing.",
+            modelsKananTitle: "Matsuura Kanan",
+            modelsKananDesc: "All the work (sculpting, polypaint, render) was done entirely in Zbrush",
+            modelsMilitaryTitle: "Military Man",
+            modelsMilitaryDesc: "Based on the artwork by Korean Artist Gime (기메)",
+            modelsMasqueTitle: "Masque Agent",
+            modelsMasqueDesc: "Fanart basado en el juego \"Carte\".",
             
             // Footer
             rightsReserved: "Todos los derechos reservados"
@@ -610,6 +639,19 @@
             tooltipTexturing: "Texturing - Application of realistic materials and textures",
             tooltipLevelDesign: "Level Design - Design of immersive levels and environments",
             
+            // Tools Descriptions
+            toolBlender: "3D Modeling & Animation",
+            toolZBrush: "Digital Sculpting & Detailing",
+            toolMaya: "Animation & Rigging",
+            tool3DSMax: "Architectural Modeling",
+            toolUnity: "Game Engine",
+            toolUnreal: "Advanced 3D Engine",
+            toolSubstance: "PBR Texturing",
+            toolPhotoshop: "Image Editing",
+            toolClipStudio: "Digital Illustration",
+            toolMarvelous: "Cloth Simulation",
+            toolAseprite: "Pixel Art & Sprites",
+            
             // Counter Section
             counterGames: "Games Developed",
             counter3D: "3D Models Created",
@@ -625,6 +667,22 @@
             modelsIntro: "Check out my Models!",
             modelsTitle: "3D Modeling",
             viewPortfolio: "View Complete Portfolio",
+            
+            // Portfolio Section
+            portfolioUnrealTitle: "Unreal Engine Demo Reel",
+            portfolioChunLiTitle: "Chun Li",
+            portfolioChunLiDesc: "Fan art sculpt of Chun-Li, originally intended for 3D printing.",
+            portfolioLiminaTitle: "Meet Limina Studio",
+            
+            // 3D Models Team Section
+            modelsChunLiTitle: "Chun Li",
+            modelsChunLiDesc: "Fan art sculpt of Chun-Li, originally intended for 3D printing.",
+            modelsKananTitle: "Matsuura Kanan",
+            modelsKananDesc: "All the work (sculpting, polypaint, render) was done entirely in Zbrush",
+            modelsMilitaryTitle: "Military Man",
+            modelsMilitaryDesc: "Based on the artwork by Korean Artist Gime (기메)",
+            modelsMasqueTitle: "Masque Agent",
+            modelsMasqueDesc: "Fanart based on the game \"Carte\".",
             
             // Footer
             rightsReserved: "All rights reserved"
@@ -664,6 +722,19 @@
             tooltipTexturing: "テクスチャリング - リアルな素材とテクスチャの適用",
             tooltipLevelDesign: "レベルデザイン - 没入型レベルと環境のデザイン",
             
+            // Tools Descriptions
+            toolBlender: "3Dモデリング&アニメーション",
+            toolZBrush: "デジタル彫刻&ディテール",
+            toolMaya: "アニメーション&リギング",
+            tool3DSMax: "建築モデリング",
+            toolUnity: "ゲームエンジン",
+            toolUnreal: "高度な3Dエンジン",
+            toolSubstance: "PBRテクスチャリング",
+            toolPhotoshop: "画像編集",
+            toolClipStudio: "デジタルイラスト",
+            toolMarvelous: "布シミュレーション",
+            toolAseprite: "ピクセルアート&スプライト",
+            
             // Counter Section
             counterGames: "開発したゲーム",
             counter3D: "作成した3Dモデル",
@@ -680,6 +751,22 @@
             modelsTitle: "3Dモデリング",
             viewPortfolio: "完全なポートフォリオを見る",
             
+            // Portfolio Section
+            portfolioUnrealTitle: "Unreal Engineデモリール",
+            portfolioChunLiTitle: "春麗（チュン・リー）",
+            portfolioChunLiDesc: "3Dプリント用に制作した春麗のファンアート彫刻。",
+            portfolioLiminaTitle: "Liminaスタジオを知る",
+            
+            // 3D Models Team Section
+            modelsChunLiTitle: "春麗（チュン・リー）",
+            modelsChunLiDesc: "3Dプリント用に制作した春麗のファンアート彫刻。",
+            modelsKananTitle: "松浦果南",
+            modelsKananDesc: "全ての作業（彫刻、ポリペイント、レンダリング）をZbrushで完全に制作",
+            modelsMilitaryTitle: "軍人",
+            modelsMilitaryDesc: "韓国のアーティストGime（기메）のアートワークに基づく",
+            modelsMasqueTitle: "マスクエージェント",
+            modelsMasqueDesc: "ゲーム「Carte」に基づくファンアート。",
+            
             // Footer
             rightsReserved: "全著作権所有"
         }
@@ -687,6 +774,14 @@
 
     function changeLanguage(lang) {
         console.log('🌍 changeLanguage called with:', lang);
+        
+        // Update HTML lang attribute for CSS styling
+        $('html').attr('lang', lang);
+        console.log('🎨 HTML lang attribute updated to:', lang);
+        console.log('🎨 Verification - HTML lang is now:', $('html').attr('lang'));
+        
+        // Check if navbar elements exist for debugging
+        console.log('🔍 Navbar elements found:', $('.header__nav__menu ul li a').length);
         
         // Add early return for debugging
         console.log('🧪 DEBUG: Page elements check');
@@ -870,6 +965,59 @@
         });
         console.log('🎯 Skills tooltips updated');
         
+        // Update tools descriptions
+        console.log('🛠️ Updating tools descriptions...');
+        $('.tool-description').each(function(index) {
+            var $description = $(this);
+            switch(index) {
+                case 0: 
+                    $description.text(t.toolBlender);
+                    console.log('✅ Updated tool 0 (Blender):', t.toolBlender);
+                    break;
+                case 1: 
+                    $description.text(t.toolZBrush);
+                    console.log('✅ Updated tool 1 (ZBrush):', t.toolZBrush);
+                    break;
+                case 2: 
+                    $description.text(t.toolMaya);
+                    console.log('✅ Updated tool 2 (Maya):', t.toolMaya);
+                    break;
+                case 3: 
+                    $description.text(t.tool3DSMax);
+                    console.log('✅ Updated tool 3 (3DS Max):', t.tool3DSMax);
+                    break;
+                case 4: 
+                    $description.text(t.toolUnity);
+                    console.log('✅ Updated tool 4 (Unity):', t.toolUnity);
+                    break;
+                case 5: 
+                    $description.text(t.toolUnreal);
+                    console.log('✅ Updated tool 5 (Unreal):', t.toolUnreal);
+                    break;
+                case 6: 
+                    $description.text(t.toolSubstance);
+                    console.log('✅ Updated tool 6 (Substance):', t.toolSubstance);
+                    break;
+                case 7: 
+                    $description.text(t.toolPhotoshop);
+                    console.log('✅ Updated tool 7 (Photoshop):', t.toolPhotoshop);
+                    break;
+                case 8: 
+                    $description.text(t.toolClipStudio);
+                    console.log('✅ Updated tool 8 (Clip Studio):', t.toolClipStudio);
+                    break;
+                case 9: 
+                    $description.text(t.toolMarvelous);
+                    console.log('✅ Updated tool 9 (Marvelous):', t.toolMarvelous);
+                    break;
+                case 10: 
+                    $description.text(t.toolAseprite);
+                    console.log('✅ Updated tool 10 (Aseprite):', t.toolAseprite);
+                    break;
+            }
+        });
+        console.log('🛠️ Tools descriptions updated');
+        
         // Update counter section
         $('.counter__item__text p').each(function(index) {
             switch(index) {
@@ -885,10 +1033,80 @@
         $('.callto__text p').text(t.ctaSubtitle);
         $('.callto__text a').text(t.ctaButton);
         
+        // Update portfolio section
+        console.log('🎨 Updating portfolio section...');
+        $('.work__item__hover h4').each(function(index) {
+            switch(index) {
+                case 0: 
+                    $(this).text(t.portfolioUnrealTitle);
+                    console.log('✅ Updated portfolio title 0 (Unreal):', t.portfolioUnrealTitle);
+                    break;
+                case 1: 
+                    $(this).text(t.portfolioChunLiTitle);
+                    console.log('✅ Updated portfolio title 1 (Chun Li):', t.portfolioChunLiTitle);
+                    break;
+                case 2: 
+                    $(this).text(t.portfolioLiminaTitle);
+                    console.log('✅ Updated portfolio title 2 (Limina):', t.portfolioLiminaTitle);
+                    break;
+            }
+        });
+        
+        // Update Chun Li description
+        $('.work__item__hover ul li').text(t.portfolioChunLiDesc);
+        console.log('✅ Updated Chun Li description:', t.portfolioChunLiDesc);
+        console.log('🎨 Portfolio section updated');
+        
         // Update 3D models section
+        console.log('🎯 Updating 3D models section...');
         $('.team__title span').text(t.modelsIntro);
         $('.team__title h2').text(t.modelsTitle);
         $('.team__btn a').text(t.viewPortfolio);
+        
+        // Update individual 3D model items
+        $('.team__item__text h4').each(function(index) {
+            switch(index) {
+                case 0:
+                    $(this).text(t.modelsChunLiTitle);
+                    console.log('✅ Updated 3D model 0 (Chun Li):', t.modelsChunLiTitle);
+                    break;
+                case 1:
+                    $(this).text(t.modelsKananTitle);
+                    console.log('✅ Updated 3D model 1 (Kanan):', t.modelsKananTitle);
+                    break;
+                case 2:
+                    $(this).text(t.modelsMilitaryTitle);
+                    console.log('✅ Updated 3D model 2 (Military):', t.modelsMilitaryTitle);
+                    break;
+                case 3:
+                    $(this).text(t.modelsMasqueTitle);
+                    console.log('✅ Updated 3D model 3 (Masque):', t.modelsMasqueTitle);
+                    break;
+            }
+        });
+        
+        // Update individual 3D model descriptions
+        $('.team__item__text p').each(function(index) {
+            switch(index) {
+                case 0:
+                    $(this).text(t.modelsChunLiDesc);
+                    console.log('✅ Updated 3D model desc 0 (Chun Li):', t.modelsChunLiDesc);
+                    break;
+                case 1:
+                    $(this).text(t.modelsKananDesc);
+                    console.log('✅ Updated 3D model desc 1 (Kanan):', t.modelsKananDesc);
+                    break;
+                case 2:
+                    $(this).text(t.modelsMilitaryDesc);
+                    console.log('✅ Updated 3D model desc 2 (Military):', t.modelsMilitaryDesc);
+                    break;
+                case 3:
+                    $(this).text(t.modelsMasqueDesc);
+                    console.log('✅ Updated 3D model desc 3 (Masque):', t.modelsMasqueDesc);
+                    break;
+            }
+        });
+        console.log('🎯 3D models section updated');
         
         // Update footer safely (without document.write)
         const currentYear = new Date().getFullYear();
@@ -936,6 +1154,9 @@
     // Load saved language on page load
     const savedLang = localStorage.getItem('selectedLanguage') || 'es';
     console.log('🚀 Page loaded, saved language:', savedLang);
+    
+    // Set initial HTML lang attribute
+    $('html').attr('lang', savedLang);
     
     // Initialize current year safely
     $('#currentYear').text(new Date().getFullYear());

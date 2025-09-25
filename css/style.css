@@ -3193,3 +3193,10 @@ ol {
     backface-visibility: hidden !important;
     perspective: 1000px !important;
 }
+
+/* Tamaño de fuente específico para japonés en navbar desktop */
+@media (min-width: 992px) {
+    html[lang="ja"] .header__nav__menu ul li a {
+        font-size: 12px !important;
+    }
+}
