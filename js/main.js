@@ -720,7 +720,7 @@
             tooltipZBrush: "ZBrushでのキャラクタースカルプティングとハードサーフェスオブジェクト",
             tooltipGameDev: "ゲーム開発 - プログラミングとゲームプレイデザイン",
             tooltipTexturing: "テクスチャリング - リアルな素材とテクスチャの適用",
-            tooltipLevelDesign: "レベルデザイン - 没入型レベルと環境のデザイン",
+            tooltipLevelDesign: "レベルデザイン - 没入型レベルと背景のデザイン",
             
             // Tools Descriptions
             toolBlender: "3Dモデリング&アニメーション",
@@ -733,7 +733,7 @@
             toolPhotoshop: "画像編集",
             toolClipStudio: "デジタルイラスト",
             toolMarvelous: "布シミュレーション",
-            toolAseprite: "ピクセルアート&スプライト",
+            toolAseprite: "ドッド絵&スプライト",
             
             // Counter Section
             counterGames: "開発したゲーム",
