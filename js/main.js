@@ -716,7 +716,7 @@
             toolsTitle: "ツール",
             
             // Skills Tooltips
-            tooltip3DModeling: "3Dモデリング - キャラクターと環境のモデリング",
+            tooltip3DModeling: "3Dモデリング - キャラクターと背景のモデリング",
             tooltipZBrush: "ZBrushでのキャラクタースカルプティングとハードサーフェスオブジェクト",
             tooltipGameDev: "ゲーム開発 - プログラミングとゲームプレイデザイン",
             tooltipTexturing: "テクスチャリング - リアルな素材とテクスチャの適用",
